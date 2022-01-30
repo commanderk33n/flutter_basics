@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_profile/star.dart';
 
 class ProfileScreen extends StatelessWidget {
   @override
@@ -46,6 +47,9 @@ class ProfileScreen extends StatelessWidget {
           Text(
             'Wolfram Barkovich',
             style: TextStyle(fontSize: 35, fontWeight: FontWeight.w600),
+          ),
+          StarRating(
+            value: 5,
           ),
           _buildDetailsRow('Age', '4'),
           _buildDetailsRow('Status ', 'Good Boy'),
