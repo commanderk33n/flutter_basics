@@ -1,0 +1,99 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "basic",
+            "cwd": "basic",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "basic (profile mode)",
+            "cwd": "basic",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "flutter_flexible",
+            "cwd": "flutter_flexible",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "flutter_flexible (profile mode)",
+            "cwd": "flutter_flexible",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "flutter_layout",
+            "cwd": "flutter_layout",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "flutter_layout (profile mode)",
+            "cwd": "flutter_layout",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "flutter_profile",
+            "cwd": "flutter_profile",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "flutter_profile (profile mode)",
+            "cwd": "flutter_profile",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "friendly_chat",
+            "cwd": "friendly_chat",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "friendly_chat (profile mode)",
+            "cwd": "friendly_chat",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "starup_namer",
+            "cwd": "starup_namer",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "starup_namer (profile mode)",
+            "cwd": "starup_namer",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "terminal",
+            "cwd": "terminal",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "terminal (profile mode)",
+            "cwd": "terminal",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        }
+    ]
+}
