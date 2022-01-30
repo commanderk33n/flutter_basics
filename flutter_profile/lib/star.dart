@@ -4,7 +4,11 @@ class Star extends StatelessWidget {
   final Color? color;
   final double? size;
 
-  const Star({Key? key, this.color, this.size}) : super(key: key);
+  const Star({
+    Key? key,
+    this.color,
+    this.size,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
