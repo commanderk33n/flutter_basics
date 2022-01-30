@@ -88,12 +88,14 @@ class _StopWatchState extends State<StopWatch> {
               SizedBox(
                 width: 20,
               ),
-              ElevatedButton(
-                onPressed: isTicking ? _lap : null,
-                child: Text('Lap'),
-                style: ButtonStyle(
-                  backgroundColor:
-                      MaterialStateProperty.all<Color>(Colors.yellow),
+              Builder(
+                builder: (context) => ElevatedButton(
+                  onPressed: isTicking ? () => _lap(context) : null,
+                  child: Text('Lap'),
+                  style: ButtonStyle(
+                    backgroundColor:
+                        MaterialStateProperty.all<Color>(Colors.yellow),
+                  ),
                 ),
               ),
               SizedBox(
@@ -115,13 +117,16 @@ class _StopWatchState extends State<StopWatch> {
     );
   }
 
-  void _lap() {
+  void _lap(BuildContext context) {
     setState(() {
       laps.add(milliseconds);
       milliseconds = 0;
     });
     scrollController.animateTo(itemHeight * laps.length,
         duration: Duration(milliseconds: 500), curve: Curves.easeIn);
+    final controller =
+        showBottomSheet(context: context, builder: _buildLapCompleteSheet);
+    Future.delayed(Duration(seconds: 2)).then((_) => controller.close());
   }
 
   void _startTimer() {
@@ -145,6 +150,27 @@ class _StopWatchState extends State<StopWatch> {
       message: 'Total Run Time is ${_secondsText(totalRuntime)}.',
     );
     alert.show(context);
+  }
+
+  Widget _buildLapCompleteSheet(BuildContext context) {
+    final lapRunTime = laps.last;
+    final textTheme = Theme.of(context).textTheme;
+    return SafeArea(
+      child: Container(
+        color: Theme.of(context).cardColor,
+        width: double.infinity,
+        child: Padding(
+          padding: EdgeInsets.symmetric(vertical: 30.0),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Text('Lap Finished', style: textTheme.headline6),
+              Text('Lap Run Time is  ${_secondsText(lapRunTime)}.'),
+            ],
+          ),
+        ),
+      ),
+    );
   }
 
   String _secondsText(int milliseconds) {
