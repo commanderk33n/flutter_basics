@@ -5,6 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "master_plan",
+            "cwd": "master_plan",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/views/main.dart"
+        },
+        {
             "name": "basic",
             "cwd": "basic",
             "request": "launch",
